@@ -22,14 +22,15 @@ modules:
   - type: bling
     install:
       - 1password
-  # - type: dnf
-  #   repos:
-  #     copr:
-  #       - atim/starship
-  #   install:
-  #     packages:
-  #       - micro
-  #       - starship
+  - type: dnf
+    repos:
+      copr:
+        - yalter/niri
+    install:
+      packages:
+        - niri
+        - xwayland-satellite
+        - waybar
   #   remove:
   #     packages:
   #       # example: removing firefox (in favor of the flatpak)
@@ -37,14 +38,16 @@ modules:
   #       - firefox
   #       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
-  # - type: default-flatpaks
-  #   configurations:
-  #     - notify: true # Send notification after install/uninstall is finished (true/false)
-  #       scope: system
-  #       # If no repo information is specified, Flathub will be used by default
-  #       install: # system flatpaks we want all users to have and not remove
-  #         - org.mozilla.firefox
-  #         - org.gnome.Loupe
+  - type: default-flatpaks
+    configurations:
+      - notify: true # Send notification after install/uninstall is finished (true/false)
+        scope: system
+        # If no repo information is specified, Flathub will be used by default
+        # install: # system flatpaks we want all users to have and not remove
+        #   - org.mozilla.firefox
+        #   - org.gnome.Loupe
+        remove: # system flatpaks we want all users to have and not remove
+          - org.mozilla.firefox
   #     - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
