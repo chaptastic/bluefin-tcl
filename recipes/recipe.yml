@@ -36,6 +36,7 @@ modules:
         - brightnessctl
         - wl-gammactl
         - ueberzugpp
+        - rofi
   #   remove:
   #     packages:
   #       # example: removing firefox (in favor of the flatpak)
