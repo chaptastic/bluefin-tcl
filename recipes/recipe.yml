@@ -26,11 +26,16 @@ modules:
     repos:
       copr:
         - yalter/niri
+      files:
+        - https://download.opensuse.org/repositories/home:justkidding/Fedora_42/home:justkidding.repo
     install:
       packages:
         - niri
         - xwayland-satellite
         - waybar
+        - brightnessctl
+        - wl-gammactl
+        - ueberzugpp
   #   remove:
   #     packages:
   #       # example: removing firefox (in favor of the flatpak)
