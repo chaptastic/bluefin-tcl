@@ -27,6 +27,7 @@ modules:
       copr:
         - yalter/niri
         - wezfurlong/wezterm-nightly
+        - scottames/ghostty
       files:
         - https://download.opensuse.org/repositories/home:justkidding/Fedora_42/home:justkidding.repo
     install:
@@ -46,6 +47,7 @@ modules:
         - thunar-volman
         - wezterm
         - xfce4-settings
+        - ghostty
   #   remove:
   #     packages:
   #       # example: removing firefox (in favor of the flatpak)
