@@ -33,7 +33,7 @@ modules:
       packages:
         - niri
         - xwayland-satellite
-   Ad     - waybar
+        - waybar
         - brightnessctl
         - wl-gammactl
         - ueberzugpp
@@ -45,6 +45,7 @@ modules:
         - thunar-vcs-plugin
         - thunar-volman
         - wezterm
+        - xfce4-settings
   #   remove:
   #     packages:
   #       # example: removing firefox (in favor of the flatpak)
