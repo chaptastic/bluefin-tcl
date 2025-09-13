@@ -28,6 +28,10 @@ modules:
         - yalter/niri
         - wezfurlong/wezterm-nightly
         - scottames/ghostty
+        - solopasha/hyprland
+        - errornointernet/quickshell
+        - wef/cliphist
+        - heus-sueh/packages
       files:
         - https://download.opensuse.org/repositories/home:justkidding/Fedora_42/home:justkidding.repo
     install:
@@ -48,6 +52,17 @@ modules:
         - wezterm
         - xfce4-settings
         - ghostty
+        - gtk-murrine-engine
+        - gnome-themes-extra
+        - hyprland
+        - quickshell-git
+        - cliphist
+        - matugen
+        - cava
+        - wl-clipboard
+        - cliphist
+        - gammastep
+
   #   remove:
   #     packages:
   #       # example: removing firefox (in favor of the flatpak)
