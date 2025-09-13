@@ -28,10 +28,6 @@ modules:
         - yalter/niri
         - wezfurlong/wezterm-nightly
         - scottames/ghostty
-        - solopasha/hyprland
-        - errornointernet/quickshell
-        - wef/cliphist
-        - heus-sueh/packages
       files:
         - https://download.opensuse.org/repositories/home:justkidding/Fedora_42/home:justkidding.repo
     install:
@@ -52,17 +48,6 @@ modules:
         - wezterm
         - xfce4-settings
         - ghostty
-        - gtk-murrine-engine
-        - gnome-themes-extra
-        - hyprland
-        - quickshell-git
-        - cliphist
-        - matugen
-        - cava
-        - wl-clipboard
-        - cliphist
-        - gammastep
-        - mate-polkit
 
   #   remove:
   #     packages:
@@ -70,6 +55,32 @@ modules:
   #       # "firefox" is the main package, "firefox-langpacks" is a dependency
   #       - firefox
   #       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+  - type: dnf
+    install:
+      packages:
+        - gtk-murrine-engine
+        - gnome-themes-extra
+        - cava
+        - wl-clipboard
+        - gammastep
+        - mate-polkit
+  - type: dnf
+    repos:
+      copr:
+        - solopasha/hyprland
+    install:
+      packages:
+        - hyprland
+        - cliphist
+        - matugen
+        - swww
+  - type: dnf
+    repos:
+      copr:
+        - errornointernet/quickshell
+    install:
+      packages:
+        - quickshell-git
 
   - type: default-flatpaks
     configurations:
