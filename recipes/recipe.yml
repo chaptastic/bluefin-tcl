@@ -48,6 +48,7 @@ modules:
         - wezterm
         - xfce4-settings
         - ghostty
+        - qt6ct
 
   #   remove:
   #     packages:
