@@ -62,6 +62,7 @@ modules:
         - wl-clipboard
         - cliphist
         - gammastep
+        - mate-polkit
 
   #   remove:
   #     packages:
