@@ -1,0 +1,99 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/<user>/<name>
+name: bazzite-tcl
+# description will be included in the image's metadata
+description: Customized version of Bazzite DX.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/bazzite-dx-gnome
+image-version: stable # 42 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+  - type: rpm-ostree
+    install:
+      - firefox
+  - type: bling
+    install:
+      - 1password
+  - type: dnf
+    repos:
+      copr:
+        - yalter/niri
+        - wezfurlong/wezterm-nightly
+        - scottames/ghostty
+      files:
+        - https://download.opensuse.org/repositories/home:justkidding/Fedora_42/home:justkidding.repo
+    install:
+      packages:
+        - niri
+        - xwayland-satellite
+        - waybar
+        - brightnessctl
+        - wl-gammactl
+        - ueberzugpp
+        - rofi
+        - Thunar
+        - Thunar-docs
+        - thunar-archive-plugin
+        - thunar-media-tags-plugin
+        - thunar-vcs-plugin
+        - thunar-volman
+        - wezterm
+        - xfce4-settings
+        - ghostty
+        - qt6ct
+        - emacs
+
+  #   remove:
+  #     packages:
+  #       # example: removing firefox (in favor of the flatpak)
+  #       # "firefox" is the main package, "firefox-langpacks" is a dependency
+  #       - firefox
+  #       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+  - type: dnf
+    install:
+      packages:
+        - gtk-murrine-engine
+        - gnome-themes-extra
+        - cava
+        - wl-clipboard
+        - gammastep
+        - mate-polkit
+  - type: dnf
+    repos:
+      copr:
+        - solopasha/hyprland
+    install:
+      packages:
+        - hyprland
+        - cliphist
+        - matugen
+        - swww
+  - type: dnf
+    repos:
+      copr:
+        - errornointernet/quickshell
+    install:
+      packages:
+        - quickshell-git
+
+  - type: default-flatpaks
+    configurations:
+      - notify: true # Send notification after install/uninstall is finished (true/false)
+        scope: system
+        # If no repo information is specified, Flathub will be used by default
+        # install: # system flatpaks we want all users to have and not remove
+        #   - org.mozilla.firefox
+        #   - org.gnome.Loupe
+        remove: # system flatpaks we want all users to have and not remove
+          - org.mozilla.firefox
+  #     - scope: user # Also add Flathub user repo, but no user packages
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
