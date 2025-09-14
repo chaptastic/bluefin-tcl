@@ -49,6 +49,7 @@ modules:
         - xfce4-settings
         - ghostty
         - qt6ct
+        - emacs
 
   #   remove:
   #     packages:
