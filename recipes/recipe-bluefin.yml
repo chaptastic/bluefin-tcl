@@ -50,7 +50,6 @@ modules:
         - ghostty
         - qt6ct
         - emacs
-        - gtk-murrine-engine
 
   #   remove:
   #     packages:
