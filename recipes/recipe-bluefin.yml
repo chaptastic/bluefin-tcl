@@ -32,7 +32,7 @@ modules:
         - scottames/ghostty
         - solopasha/hyprland
       files:
-        - https://download.opensuse.org/repositories/home:justkidding/Fedora_Rawhide/home:justkidding.repo
+        - https://download.opensuse.org/repositories/home:justkidding/Fedora_42/home:justkidding.repo
     install:
       packages:
         - niri
