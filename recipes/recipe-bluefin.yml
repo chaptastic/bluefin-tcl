@@ -31,10 +31,6 @@ modules:
         - wezfurlong/wezterm-nightly
         - scottames/ghostty
         - solopasha/hyprland
-        - hyprland
-        - cliphist
-        - matugen
-        - swww
       files:
         - https://download.opensuse.org/repositories/home:justkidding/Fedora_Rawhide/home:justkidding.repo
     install:
@@ -69,6 +65,10 @@ modules:
         - mate-polkit
         - dnf-plugins-core
         - golang-bin
+        - hyprland
+        - cliphist
+        - matugen
+        - swww
 
   - type: default-flatpaks
     configurations:
