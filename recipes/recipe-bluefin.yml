@@ -41,6 +41,9 @@ modules:
       packages:
         - niri
         - dms
+        - dms-greeter
+        - dgop
+        - dsearch
         - xwayland-satellite
         - waybar
         - brightnessctl
