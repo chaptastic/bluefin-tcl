@@ -27,7 +27,7 @@ modules:
       copr:
         - avengemedia/dms
         - avengemedia/danklinux
-        - yalter/niri-git
+        - yalter/niri
         - wezfurlong/wezterm-nightly
         - scottames/ghostty
         - solopasha/hyprland
