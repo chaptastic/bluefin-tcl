@@ -25,14 +25,21 @@ modules:
   - type: dnf
     repos:
       copr:
-        - yalter/niri-git
+        - avengemedia/dms
+        - avengemedia/danklinux
+        - yalter/niri
         - wezfurlong/wezterm-nightly
         - scottames/ghostty
+        - solopasha/hyprland
       files:
         - https://download.opensuse.org/repositories/home:justkidding/Fedora_42/home:justkidding.repo
     install:
       packages:
         - niri
+        - dms
+        - dms-greeter
+        - dgop
+        - dsearch
         - xwayland-satellite
         - waybar
         - brightnessctl
@@ -50,39 +57,18 @@ modules:
         - ghostty
         - qt6ct
         - emacs
-
-  #   remove:
-  #     packages:
-  #       # example: removing firefox (in favor of the flatpak)
-  #       # "firefox" is the main package, "firefox-langpacks" is a dependency
-  #       - firefox
-  #       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-  - type: dnf
-    install:
-      packages:
         - gtk-murrine-engine
         - gnome-themes-extra
         - cava
         - wl-clipboard
         - gammastep
         - mate-polkit
-  - type: dnf
-    repos:
-      copr:
-        - solopasha/hyprland
-    install:
-      packages:
         - hyprland
         - cliphist
         - matugen
         - swww
-  - type: dnf
-    repos:
-      copr:
-        - errornointernet/quickshell
-    install:
-      packages:
-        - quickshell-git
+        - dnf-plugins-core
+        - golang-bin
 
   - type: default-flatpaks
     configurations:
