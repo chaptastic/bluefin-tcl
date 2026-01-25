@@ -28,6 +28,7 @@ modules:
         - https://download.opensuse.org/repositories/home:justkidding/Fedora_42/home:justkidding.repo
     install:
       packages:
+        - gutenprint
         - ueberzugpp
         - wezterm
         - ghostty
