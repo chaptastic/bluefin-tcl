@@ -36,6 +36,8 @@ modules:
         - gtk-murrine-engine
         - gnome-themes-extra
         - wl-clipboard
+        - chezmoi
+        - ansible
 
   - type: default-flatpaks
     configurations:
