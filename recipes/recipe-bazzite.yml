@@ -29,9 +29,9 @@ modules:
       packages:
         # - ueberzugpp
         - ghostty
-        - emacs
+        # - emacs
         - chezmoi
-        - ansible
+        - ansible-core
 
   - type: default-flatpaks
     configurations:
