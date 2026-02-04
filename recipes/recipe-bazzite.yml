@@ -22,20 +22,14 @@ modules:
   - type: dnf
     repos:
       copr:
-        - wezfurlong/wezterm-nightly
         - scottames/ghostty
-      files:
-        - https://download.opensuse.org/repositories/home:justkidding/Fedora_42/home:justkidding.repo
+      # files:
+        # - https://download.opensuse.org/repositories/home:justkidding/Fedora_42/home:justkidding.repo
     install:
       packages:
-        - gutenprint
-        - ueberzugpp
-        - wezterm
+        # - ueberzugpp
         - ghostty
         - emacs
-        - gtk-murrine-engine
-        - gnome-themes-extra
-        - wl-clipboard
         - chezmoi
         - ansible
 
