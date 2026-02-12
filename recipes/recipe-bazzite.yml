@@ -23,6 +23,7 @@ modules:
     repos:
       copr:
         - scottames/ghostty
+        - quadratech188/vicinae
       # files:
         # - https://download.opensuse.org/repositories/home:justkidding/Fedora_42/home:justkidding.repo
     install:
@@ -32,6 +33,7 @@ modules:
         # - emacs
         - chezmoi
         - ansible-core
+        - vicinae
 
   - type: default-flatpaks
     configurations:
