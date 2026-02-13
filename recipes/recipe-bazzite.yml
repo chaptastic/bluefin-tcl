@@ -24,6 +24,8 @@ modules:
       copr:
         - scottames/ghostty
         - quadratech188/vicinae
+        - avengemedia/dms
+        - avengemedia/danklinux
       # files:
         # - https://download.opensuse.org/repositories/home:justkidding/Fedora_42/home:justkidding.repo
     install:
@@ -34,6 +36,11 @@ modules:
         - chezmoi
         - ansible-core
         - vicinae
+        - niri
+        - dms
+        - dsearch
+        - matugen
+        - dgop
 
   - type: default-flatpaks
     configurations:
