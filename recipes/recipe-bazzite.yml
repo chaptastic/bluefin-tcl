@@ -36,6 +36,10 @@ modules:
         - chezmoi
         - ansible-core
         - vicinae
+        - cava
+        - qt6-qtmultimedia
+        - cargo
+        - rust
         - niri
         - dms
         - dsearch
