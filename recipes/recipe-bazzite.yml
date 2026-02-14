@@ -54,6 +54,7 @@ modules:
         - sway-systemd
         - sway-wallpapers
         - mangowc
+        - kitty
 
   - type: default-flatpaks
     configurations:
