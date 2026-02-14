@@ -21,6 +21,8 @@ modules:
       - 1password
   - type: dnf
     repos:
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       copr:
         - scottames/ghostty
         - quadratech188/vicinae
@@ -29,6 +31,7 @@ modules:
         - solopasha/hyprland
     install:
       packages:
+        - terra-release
         - ghostty
         - chezmoi
         - ansible-core
@@ -49,6 +52,11 @@ modules:
         - hypridle
         - hyprlock
         - hyprpolkitagent
+        - sway
+        - sway-config-fedora
+        - sway-contrib
+        - sway-systemd
+        - sway-wallpapers
 
   - type: default-flatpaks
     configurations:
