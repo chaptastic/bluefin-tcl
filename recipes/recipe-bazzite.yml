@@ -48,15 +48,12 @@ modules:
         - hyprland
         - hyprland-contrib
         - hyprland-plugins
-        - hyprpaper
-        - hypridle
-        - hyprlock
-        - hyprpolkitagent
         - sway
         - sway-config-fedora
         - sway-contrib
         - sway-systemd
         - sway-wallpapers
+        - mangowc
 
   - type: default-flatpaks
     configurations:
