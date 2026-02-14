@@ -26,13 +26,10 @@ modules:
         - quadratech188/vicinae
         - avengemedia/dms
         - avengemedia/danklinux
-      # files:
-        # - https://download.opensuse.org/repositories/home:justkidding/Fedora_42/home:justkidding.repo
+        - solopasha/hyprland
     install:
       packages:
-        # - ueberzugpp
         - ghostty
-        # - emacs
         - chezmoi
         - ansible-core
         - vicinae
@@ -45,6 +42,13 @@ modules:
         - dsearch
         - matugen
         - dgop
+        - hyprland
+        - hyprland-contrib
+        - hyprland-plugins
+        - hyprpaper
+        - hypridle
+        - hyprlock
+        - hyprpolkitagent
 
   - type: default-flatpaks
     configurations:
