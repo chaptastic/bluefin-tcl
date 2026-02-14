@@ -45,9 +45,7 @@ modules:
         - dsearch
         - matugen
         - dgop
-        - hyprland
-        - hyprland-contrib
-        - hyprland-plugins
+        - hyprland-git
         - sway
         - sway-config-fedora
         - sway-contrib
@@ -55,6 +53,14 @@ modules:
         - sway-wallpapers
         - mangowc
         - kitty
+        - hyprland-plugin-csgo-vulkan-fix-git
+        - hyprland-plugin-hyprbars-git
+        - hyprland-plugin-hyprexpo-git
+        - hyprland-plugin-hyprfocus-git
+        - hyprland-plugin-hyprscrolling-git
+        - hyprland-plugin-hyprtrails-git
+        - hyprland-plugin-hyprwinwrap-git
+        - hyprland-plugin-xtra-dispatchers-git
 
   - type: default-flatpaks
     configurations:
