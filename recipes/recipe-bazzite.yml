@@ -21,17 +21,14 @@ modules:
       - 1password
   - type: dnf
     repos:
-      files:
-        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       copr:
         - scottames/ghostty
         - quadratech188/vicinae
-        - avengemedia/dms
+        - avengemedia/dms-git
         - avengemedia/danklinux
         - acidburnmonkey/hyprland
     install:
       packages:
-        - terra-release
         - ghostty
         - chezmoi
         - ansible-core
@@ -41,24 +38,17 @@ modules:
         - cargo
         - rust
         - niri
+        - quickshell-git
+        - breakpad
+        - cliphist
+        - danksearch
+        - dms-greeter
+        - material-symbols-fonts
         - dms
         - dsearch
         - matugen
         - dgop
-        - sway
-        - sway-config-fedora
-        - sway-contrib
-        - sway-systemd
-        - sway-wallpapers
-        - mangowc
         - kitty
-        - hyprland
-        - xdg-desktop-portal-hyprland
-        - hypridle
-        - hyprland-guiutils
-        - hyprlock
-        - hyprutils
-        - hyprwire
 
   - type: default-flatpaks
     configurations:
