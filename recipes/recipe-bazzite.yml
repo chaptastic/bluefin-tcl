@@ -26,18 +26,22 @@ modules:
         - quadratech188/vicinae
         - avengemedia/dms-git
         - avengemedia/danklinux
-        - acidburnmonkey/hyprland
+        - yalter/niri-git
     install:
       packages:
         - ghostty
         - chezmoi
         - ansible-core
         - vicinae
+        - xwayland-satellite
         - cava
         - qt6-qtmultimedia
+        - qt6ct
         - cargo
         - rust
-        - niri
+        - repo: copr:copr.fedorainfracloud.org:yalter:niri-git
+          packages:
+          - niri
         - quickshell-git
         - breakpad
         - cliphist
