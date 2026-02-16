@@ -56,6 +56,8 @@ modules:
         - powertop
         - pam-u2f
         - pamu2fcfg
+        - terminus-fonts-console
+        - terminus-fonts
 
   - type: default-flatpaks
     configurations:
