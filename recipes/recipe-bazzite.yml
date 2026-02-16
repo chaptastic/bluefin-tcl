@@ -53,6 +53,7 @@ modules:
         - matugen
         - dgop
         - kitty
+        - powertop
 
   - type: default-flatpaks
     configurations:
