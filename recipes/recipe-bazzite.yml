@@ -54,6 +54,8 @@ modules:
         - dgop
         - kitty
         - powertop
+        - pam-u2f
+        - pamu2fcfg
 
   - type: default-flatpaks
     configurations:
