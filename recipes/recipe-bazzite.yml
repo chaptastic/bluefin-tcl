@@ -58,6 +58,8 @@ modules:
         - pamu2fcfg
         - terminus-fonts-console
         - terminus-fonts
+        - kde-connect
+        - kde-connect-nautilus
 
   - type: default-flatpaks
     configurations:
