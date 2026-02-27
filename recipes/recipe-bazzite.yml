@@ -21,11 +21,13 @@ modules:
       - 1password
   - type: dnf
     repos:
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       copr:
         - scottames/ghostty
         - quadratech188/vicinae
-        - avengemedia/dms-git
-        - avengemedia/danklinux
+        # - avengemedia/dms-git
+        # - avengemedia/danklinux
         - yalter/niri-git
     install:
       packages:
@@ -42,17 +44,17 @@ modules:
         - repo: copr:copr.fedorainfracloud.org:yalter:niri-git
           packages:
           - niri
-        - quickshell-git
+        # - quickshell-git
         - breakpad
         - cliphist
-        - danksearch
-        - dms-greeter
-        - material-symbols-fonts
-        - dms
-        - dsearch
+        # - danksearch
+        # - dms-greeter
+        # - material-symbols-fonts
+        # - dms
+        # - dsearch
         - matugen
-        - dgop
-        - kitty
+        # - dgop
+        # - kitty
         - powertop
         - pam-u2f
         - pamu2fcfg
@@ -60,6 +62,7 @@ modules:
         - terminus-fonts
         - kde-connect
         - kde-connect-nautilus
+        - noctalia-shell
 
   - type: default-flatpaks
     configurations:
