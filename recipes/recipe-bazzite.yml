@@ -29,6 +29,7 @@ modules:
         # - avengemedia/dms-git
         # - avengemedia/danklinux
         - yalter/niri-git
+        - errornointernet/quickshell
     install:
       packages:
         - ghostty
