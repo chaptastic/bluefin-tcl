@@ -26,8 +26,8 @@ modules:
       copr:
         - scottames/ghostty
         - quadratech188/vicinae
-        # - avengemedia/dms-git
-        # - avengemedia/danklinux
+        - avengemedia/dms-git
+        - avengemedia/danklinux
         - yalter/niri-git
         # - errornointernet/quickshell
         - vijay/Hyprland
@@ -49,13 +49,15 @@ modules:
         - quickshell
         - breakpad
         - cliphist
-        # - danksearch
-        # - dms-greeter
-        # - material-symbols-fonts
-        # - dms
-        # - dsearch
+        - danksearch
+        - dms-greeter
+        - material-symbols-fonts
+        - repo: copr:copr.fedorainfracloud.org:avengemedia:dms-git
+          packages:
+          - dms
+        - dsearch
         - matugen
-        # - dgop
+        - dgop
         # - kitty
         - powertop
         - pam-u2f
