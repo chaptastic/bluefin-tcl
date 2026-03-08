@@ -31,7 +31,6 @@ modules:
         - yalter/niri-git
         # - errornointernet/quickshell
         - vijay/Hyprland
-        - scrollwm/packages
     install:
       packages:
         - ghostty
@@ -68,16 +67,7 @@ modules:
         - kde-connect
         - kde-connect-nautilus
         - noctalia-shell
-        - scroll
-  - type: dnf
-    group-install:
-      with-optional: true
-      skip-broken: true
-      exclude:
-        - pipewire-config-raop
-        - initial-setup
-      packages:
-        - cosmic-desktop-environment
+
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
