@@ -16,59 +16,57 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-  - type: rpm-ostree
-    install:
-      - firefox
   - type: bling
     install:
       - 1password
   - type: dnf
     repos:
+      # files:
+        # - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       copr:
-        - avengemedia/dms
-        - avengemedia/danklinux
-        - yalter/niri
-        - wezfurlong/wezterm-nightly
         - scottames/ghostty
-        - solopasha/hyprland
-      files:
-        - https://download.opensuse.org/repositories/home:justkidding/Fedora_42/home:justkidding.repo
+        - quadratech188/vicinae
+        - avengemedia/dms-git
+        - avengemedia/danklinux
+        - yalter/niri-git
+        # - errornointernet/quickshell
+        - vijay/Hyprland
     install:
       packages:
-        - niri
-        - dms
-        - dms-greeter
-        - dgop
-        - dsearch
-        - xwayland-satellite
-        - waybar
-        - brightnessctl
-        - wl-gammactl
-        - ueberzugpp
-        - rofi
-        - Thunar
-        - Thunar-docs
-        - thunar-archive-plugin
-        - thunar-media-tags-plugin
-        - thunar-vcs-plugin
-        - thunar-volman
-        - wezterm
-        - xfce4-settings
         - ghostty
-        - qt6ct
-        - emacs
-        - gtk-murrine-engine
-        - gnome-themes-extra
+        - chezmoi
+        - ansible-core
+        - vicinae
+        - xwayland-satellite
         - cava
-        - wl-clipboard
-        - gammastep
-        - mate-polkit
-        - dnf-plugins-core
-        - golang-bin
-        - hyprland
+        - qt6-qtmultimedia
+        - qt6ct
+        - cargo
+        - rust
+        - repo: copr:copr.fedorainfracloud.org:yalter:niri-git
+          packages:
+          - niri
+        - quickshell
+        - breakpad
         - cliphist
+        - danksearch
+        - dms-greeter
+        - material-symbols-fonts
+        - repo: copr:copr.fedorainfracloud.org:avengemedia:dms-git
+          packages:
+          - dms
+        - dsearch
         - matugen
-        - swww
+        - dgop
+        # - kitty
+        - powertop
+        - pam-u2f
+        - pamu2fcfg
+        - terminus-fonts-console
+        - terminus-fonts
+        - kde-connect
+        - kde-connect-nautilus
+        - noctalia-shell
 
   - type: default-flatpaks
     configurations:
@@ -79,7 +77,7 @@ modules:
         #   - org.mozilla.firefox
         #   - org.gnome.Loupe
         remove: # system flatpaks we want all users to have and not remove
-          - org.mozilla.firefox
+          # - org.mozilla.firefox
   #     - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
