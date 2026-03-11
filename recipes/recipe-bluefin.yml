@@ -30,7 +30,7 @@ modules:
         - avengemedia/danklinux
         - yalter/niri-git
         # - errornointernet/quickshell
-        - vijay/Hyprland
+        # - vijay/Hyprland
     install:
       packages:
         - ghostty
@@ -46,7 +46,7 @@ modules:
         - repo: copr:copr.fedorainfracloud.org:yalter:niri-git
           packages:
           - niri
-        - quickshell
+        - quickshell-git
         - breakpad
         - cliphist
         - danksearch
@@ -66,7 +66,7 @@ modules:
         - terminus-fonts
         - kde-connect
         - kde-connect-nautilus
-        - noctalia-shell
+        # - noctalia-shell
 
   - type: default-flatpaks
     configurations:
