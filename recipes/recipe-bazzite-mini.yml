@@ -27,6 +27,7 @@ modules:
     install:
       packages:
         - ghostty
+        - vicinae
         - chezmoi
         - ansible-core
         - powertop
