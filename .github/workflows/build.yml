@@ -28,6 +28,7 @@ jobs:
         recipe:
           - recipe-bluefin.yml
           - recipe-bazzite.yml
+          - recipe-bazzite-mini.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image

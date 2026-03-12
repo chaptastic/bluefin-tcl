@@ -1,0 +1,49 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/<user>/<name>
+name: bazzite-mini-tcl
+# description will be included in the image's metadata
+description: Customized version of Bazzite DX.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/bazzite-dx-gnome
+image-version: stable
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+  - type: bling
+    install:
+      - 1password
+  - type: dnf
+    repos:
+      copr:
+        - scottames/ghostty
+        - quadratech188/vicinae
+    install:
+      packages:
+        - ghostty
+        - chezmoi
+        - ansible-core
+        - powertop
+        - terminus-fonts-console
+        - terminus-fonts
+        - kde-connect
+        - kde-connect-nautilus
+  - type: default-flatpaks
+    configurations:
+      - notify: true # Send notification after install/uninstall is finished (true/false)
+        scope: system
+        # If no repo information is specified, Flathub will be used by default
+        # install: # system flatpaks we want all users to have and not remove
+        #   - org.mozilla.firefox
+        #   - org.gnome.Loupe
+        remove: # system flatpaks we want all users to have and not remove
+          # - org.mozilla.firefox
+  #     - scope: user # Also add Flathub user repo, but no user packages
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
