@@ -16,6 +16,9 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+  - type: script
+    scripts:
+      - pin-firmware.sh
   - type: bling
     install:
       - 1password
