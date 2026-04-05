@@ -24,6 +24,8 @@ modules:
       - 1password
   - type: dnf
     repos:
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       copr:
         - scottames/ghostty
         - quadratech188/vicinae
@@ -65,6 +67,7 @@ modules:
         - dsearch
         - matugen
         - dgop
+        - mangowm
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
