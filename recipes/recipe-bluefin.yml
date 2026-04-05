@@ -7,7 +7,7 @@ description: Customized version of Bluefin DX.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/bluefin-dx
-image-version: stable # 42 # latest is also supported if you want new updates ASAP
+image-version: "43.20260313" # stable # 42 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
