@@ -68,6 +68,12 @@ modules:
         - matugen
         - dgop
         - mangowm
+        - waybar
+        - mako
+        - swaylock
+        - swayidle
+        - playerctl
+        - brightnessctl
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
