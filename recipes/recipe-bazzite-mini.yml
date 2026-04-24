@@ -71,6 +71,10 @@ modules:
         - waybar
         - mako
         - swaylock
+        - fuzzel
+        - swaybg
+        - blueman
+        - network-manager-applet
         - swayidle
         - playerctl
         - brightnessctl
