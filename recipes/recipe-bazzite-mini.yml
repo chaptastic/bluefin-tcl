@@ -32,6 +32,7 @@ modules:
         - avengemedia/dms-git
         - avengemedia/danklinux
         - yalter/niri-git
+        - erikreider/SwayNotificationCenter
     install:
       packages:
         - ghostty
@@ -69,7 +70,9 @@ modules:
         - dgop
         - mangowm
         - waybar
-        - mako
+        - repo: copr:copr.fedorainfracloud.org:erikreider:SwayNotificationCenter
+          packages:
+          - SwayNotificationCenter
         - swaylock
         - fuzzel
         - swaybg
