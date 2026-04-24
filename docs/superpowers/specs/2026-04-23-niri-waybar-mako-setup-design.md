@@ -39,7 +39,7 @@ Two places get touched:
 - `dot_local/bin/executable_niri-powermenu` — new script.
 
 **bluebuild recipe** at `recipes/recipe-bazzite-mini.yml`:
-- Add packages: `fuzzel`, `swaybg`.
+- Add packages: `fuzzel`, `swaybg`, `blueman`.
 - `swaylock`, `waybar`, `mako`, `vicinae` already present.
 - `brightnessctl`, `playerctl`, `wireplumber` (provides `wpctl`), `gnome-system-monitor` assumed present on Bazzite — plan will verify.
 
@@ -69,7 +69,7 @@ Two places get touched:
 - `idle_inhibitor`: click to toggle; icon changes with state.
 - `cpu` / `memory`: percent only in bar; tooltip with details.
 - `pulseaudio`: scroll to change volume; click to toggle mute; right-click opens `pavucontrol`.
-- `bluetooth`: icon reflects on/off/connected; click opens `blueman-manager` (or equivalent — picked at impl time based on what's installed on Bazzite).
+- `bluetooth`: icon reflects on/off/connected; click opens `blueman-manager`.
 - `network`: icon by connection type; tooltip with SSID/IP.
 - `battery`: percent + icon; warning at 20%, critical at 10%.
 - `tray`: standard system tray, spacing 10px.
@@ -172,6 +172,7 @@ Plain text labels — no Nerd Font glyphs — to keep the script portable and av
 - `spawn-at-startup "waybar"`
 - `spawn-at-startup "mako"`
 - `spawn-at-startup "vicinae" "server"`
+- `spawn-at-startup "blueman-applet"`
 - `spawn-at-startup "swaybg" "-i" "<wallpaper>" "-m" "fill"`
 
 ## File layout summary
@@ -192,6 +193,7 @@ Recipe change in `recipes/recipe-bazzite-mini.yml`:
 ```yaml
 - fuzzel
 - swaybg
+- blueman
 ```
 added alongside existing `waybar`, `mako`, `swaylock`, `vicinae`.
 
