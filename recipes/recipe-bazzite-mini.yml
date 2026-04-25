@@ -33,8 +33,11 @@ modules:
         - avengemedia/danklinux
         - yalter/niri-git
         - erikreider/SwayNotificationCenter
+        - erikreider/swayosd
+        - alebastr/sway-extras
     install:
       packages:
+        - nerd-fonts
         - ghostty
         - vicinae
         - chezmoi
@@ -48,9 +51,9 @@ modules:
           packages:
           - niri
         - material-symbols-fonts
-        - repo: copr:copr.fedorainfracloud.org:avengemedia:dms-git
-          packages:
-          - dms
+        # - repo: copr:copr.fedorainfracloud.org:avengemedia:dms-git
+        #   packages:
+        #   - dms
         - matugen
         - xwayland-satellite
         - cava
@@ -59,15 +62,14 @@ modules:
         - cargo
         - rust
         - libseat
-        - quickshell-git
+        # - quickshell-git
         - breakpad
         - cliphist
-        - danksearch
-        - dms-greeter
+        # - danksearch
+        # - dms-greeter
         - material-symbols-fonts
-        - dsearch
-        - matugen
-        - dgop
+        # - dsearch
+        # - dgop
         - mangowm
         - waybar
         - repo: copr:copr.fedorainfracloud.org:erikreider:SwayNotificationCenter
@@ -81,6 +83,15 @@ modules:
         - swayidle
         - playerctl
         - brightnessctl
+        - wl-clipboard
+        - kanshi
+        - repo: copr:copr.fedorainfracloud.org:erikreider:swayosd
+          packages:
+          - swayosd
+        - repo: copr:copr.fedorainfracloud.org:alebastr:sway-extras
+          packages:
+          - poweralertd
+        - noctalia-shell
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
